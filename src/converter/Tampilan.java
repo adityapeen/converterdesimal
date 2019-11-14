@@ -95,7 +95,7 @@ public class Tampilan extends javax.swing.JFrame {
         String biner = Integer.toBinaryString(angka);
         return biner;
     }
-    
+ 
     public String Bin2Des(String biner){
         String desimal;
         desimal = String.valueOf(Integer.parseInt(biner, 2));
@@ -119,6 +119,7 @@ public class Tampilan extends javax.swing.JFrame {
         }
         return true;
     }
+    
     public boolean isHuruf(String number){ 
         try{
             int angka = Integer.valueOf(number);
@@ -133,7 +134,6 @@ public class Tampilan extends javax.swing.JFrame {
     
     private void buttonConvertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonConvertActionPerformed
         // TODO add your handling code here:
-        int sel;
         if(!textInput.getText().isEmpty()){
             String input = textInput.getText();
             if(input.contains(".")){
@@ -164,14 +164,11 @@ public class Tampilan extends javax.swing.JFrame {
                         textOutput.setText(Des2Hex(input));
                         break;
                 }
-            }
-            
-            
+            }   
         }
         else{
-            //sel = pilihan.getSelectedIndex();
             JOptionPane.showMessageDialog(null, "Input tidak boleh kosong!",
-                    "Peringatan", JOptionPane.WARNING_MESSAGE);
+                "Peringatan", JOptionPane.WARNING_MESSAGE);
         }
     }//GEN-LAST:event_buttonConvertActionPerformed
 
